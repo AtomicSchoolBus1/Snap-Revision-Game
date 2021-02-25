@@ -1,4 +1,0 @@
-What is the name given to internet protocols for sending data across a network?
-What is the name of the protocol stack used for transporting data?
-What is the name for a small, localised network?
-What is the name for a large network?
