@@ -1,4 +1,0 @@
-What is the name given to the act of intentionally probing a network for faults?
-What are the two types of pen testing?
-What is the name of the scam technique involving tricking people into handing over their sensitive data?
-What is the name for the form of network defence that restricts traffic to and from unauthorized sources?
