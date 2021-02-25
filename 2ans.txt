@@ -1,4 +1,0 @@
-Ethernet
-TCP/IP
-LAN
-WAN
