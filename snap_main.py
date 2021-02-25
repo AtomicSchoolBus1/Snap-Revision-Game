@@ -6,11 +6,54 @@ import random
 import time
 
 #Startup script - chooses module and questions/answers (dependant on functions from snap_ext.py)
-print("Welcome to snap!")
-print("")
+while True:
+    print("Welcome to snap!")
+    print("")
+    print("Main menu:")
+    print("Type (1) to play the game with the current questions and answers.")
+    print("Type (2) to add a new question and answer to the list.")
+    print("")
+    mainMenuChoice = input("")
+    if mainMenuChoice == "1":
+        break
+    if mainMenuChoice == "2":
+        print("")
+        print("What module do you want to add a new question to? Choose either (1), (2) or (3):")
+        inputAccepted = 0
+        while inputAccepted == 0:
+            choiceOfModule = input("")
+            if choiceOfModule == "1":
+                inputAccepted = 1
+            if choiceOfModule == "2":
+                inputAccepted = 1
+            if choiceOfModule == "3":
+                inputAccepted = 1
+            else:
+                print("Invalid input, please retype your choice:")
+                print("")
+        print("")
+        print("")
+        print("Module accepted. Please type your new question: ")
+        newQ = input("")
+        print("")
+        print("Now please type the answer to that question: ")
+        newAns = input("")
+        print("")
+        print("")
+        snap_ext.addNewData(newQ, newAns, choiceOfModule)
+        print("Data submitted! Returning to main menu.")
+        time.sleep(1)
+        print("")
+    else:
+        print("")
+        print("Invalid command, please choose either (1) or (2):")
+
+
+snap_ext.prelim()
 selection = snap_ext.chooseModule()
 chosenQuestions = snap_ext.getQuestions(selection)
 chosenAns = snap_ext.getAns(selection)
+
 
 #Displays random questions and randomly shuffles through the answers
 playRequest = 1
@@ -31,10 +74,11 @@ while playRequest == 1:
             currentAnsPosition = random.randint(0, ((len(chosenAns)) - 1))
             while True:
                 if currentAnsPosition == previousAnsPosition:
+                    previousAnsPosition = currentAnsPosition
                     currentAnsPosition = random.randint(0, ((len(chosenAns)) - 1))
                 else:
                     break
-            print(chosenAns[currentAnsPosition] + (" " * len(chosenAns[previousAnsPosition])), end = "\r")
+            print(chosenAns[currentAnsPosition] + (" " * len(chosenAns[previousAnsPosition])))
             previousAnsPosition = currentAnsPosition
             choice = input("")
             if choice == "Y":
@@ -56,6 +100,7 @@ while playRequest == 1:
             print("")
             print("Answer incorrect!")
     
+
     #End of round selection
     print("")
     print("")
