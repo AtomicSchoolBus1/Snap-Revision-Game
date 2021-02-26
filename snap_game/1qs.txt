@@ -2,4 +2,3 @@ What is the name given to the 'brain' of the computer?
 What is the name for volatile, fast memory?
 What is the section of the CPU that carries out logic operations?
 What is manufacturer specific hardware data stored in?
-TestQuestion
