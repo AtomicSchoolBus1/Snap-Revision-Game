@@ -12,6 +12,7 @@ while True:
     print("Main menu:")
     print("Type (1) to play the game with the current questions and answers.")
     print("Type (2) to add a new question and answer to the list.")
+    print("Type (3) to view the instructions on how to play.")
     print("")
     mainMenuChoice = input("")
     if mainMenuChoice == "1":
@@ -44,9 +45,22 @@ while True:
         print("Data submitted! Returning to main menu.")
         time.sleep(1)
         print("")
+    if mainMenuChoice == "3":
+        print("")
+        print("Instructions:")
+        print("Welcome to snap! In this game, the aim is to match up the correct answer with the question.")
+        print("First, the game will randomly produce a question, and an answer will pop up beneath it. if the answer is not correct, press (ENTER) and the game will present a new answer. Keep going until you have found the right answer. Then, type (Y) in the input box and press (ENTER). If you guessed right, 100 points will be added to your overall score. If not, the game will move on to the second question without awarding any points. After 5 turns have passed, the game will show you your final score. After that, you can either choose to play again to increase your current score even further, or quit the game.")
+        print("")
+        print("Have fun!")
+        print("")
+        print("")
+        print("Press (ENTER) to return to the main menu:")
+        input()
+        print("")
+        print("")
     else:
         print("")
-        print("Invalid command, please choose either (1) or (2):")
+        print("Invalid command, please choose either (1), (2) or (3):")
 
 
 snap_ext.prelim()
