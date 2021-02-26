@@ -2,4 +2,3 @@ CPU
 RAM
 ALU
 Read-Only Memory
-TestAnswer
